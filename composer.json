@@ -1,5 +1,5 @@
 {
-    "name": "baezeta/kernel",
+    "name": "baezeta/laravel-kernel",
     "description": "Kernel Laravel para el uso de clases como Bus, Criteria, Entidades, Repositorios, Servicios, etc.",
     "type": "library",
     "license": "MIT",
