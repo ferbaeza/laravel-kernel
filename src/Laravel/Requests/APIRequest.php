@@ -10,7 +10,6 @@ use Illuminate\Http\Exceptions\HttpResponseException;
 
 abstract class APIRequest extends FormRequest
 {
-
     /**
      * Determine if user authorized to make this request
      * @return bool
@@ -43,4 +42,3 @@ abstract class APIRequest extends FormRequest
 
     abstract public function rules(): array;
 }
-

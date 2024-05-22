@@ -6,5 +6,4 @@ use Baezeta\Kernel\Query\Base\CustomBaseQuery;
 
 class QueryBase extends CustomBaseQuery
 {
-
 }

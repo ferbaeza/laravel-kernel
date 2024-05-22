@@ -7,10 +7,10 @@ use Illuminate\Support\ServiceProvider;
 use Baezeta\Kernel\Laravel\Console\SuperAdminCommand;
 use Baezeta\Kernel\Laravel\Middleware\TransaccionMiddleware;
 
-class PackageServiceProvider extends ServiceProvider
+class KernelServiceProvider extends ServiceProvider
 {
     use PackageTrait;
-    
+
     /**
      * Registrar los bindings de la aplicación
      */

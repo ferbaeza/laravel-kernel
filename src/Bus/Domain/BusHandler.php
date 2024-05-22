@@ -4,7 +4,6 @@ namespace Baezeta\Kernel\Bus\Domain;
 
 use Illuminate\Container\Container;
 
-
 class BusHandler
 {
     public function process($request, $handler)

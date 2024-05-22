@@ -4,8 +4,7 @@ namespace Baezeta\Kernel\Utils\Primitivos;
 
 class StringUtils
 {
-
-    public static function sinAcentos(string $cadena):string
+    public static function sinAcentos(string $cadena): string
     {
         return CharacterUtil::sinAcentos($cadena);
     }

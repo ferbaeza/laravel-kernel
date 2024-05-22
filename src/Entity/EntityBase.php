@@ -10,5 +10,4 @@ class EntityBase extends CustomBaseEntity
     {
         return get_object_vars($this);
     }
-
 }

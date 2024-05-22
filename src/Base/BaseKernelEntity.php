@@ -2,17 +2,35 @@
 
 namespace Baezeta\Kernel\Base;
 
-use Baezeta\Kernel\ValueObjects\Main\UuidValue;
+use Baezeta\Kernel\ValueObjects\Main\ClassValue;
 use Baezeta\Kernel\ValueObjects\Main\FechaValue;
 
-class BaseKernelEntity
+abstract class BaseKernelEntity
 {
-    protected string $id;
-    protected $fecha;
+    private ?ClassValue $idClass = null;
+    private ?FechaValue $fechaStart = null;
 
-    public function __construct()
+
+    public function __construct(
+        
+    )
     {
-        $this->id = UuidValue::create();
-        $this->fecha = FechaValue::create();
+        $this->idClass = ClassValue::create();
+        $this->fechaStart = FechaValue::create();
+    }
+
+    public function parentSerialize(): mixed
+    {
+        return get_object_vars($this);
+    }
+
+    public function getIdClass(): ClassValue
+    {
+        return $this->idClass;
+    }
+
+    public function getFechaStart(): FechaValue
+    {
+        return $this->fechaStart;
     }
 }

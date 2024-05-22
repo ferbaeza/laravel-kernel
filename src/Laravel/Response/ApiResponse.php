@@ -30,7 +30,7 @@ class ApiResponse
     }
 
 
-    public static function error(string | null $message =null, array $errores = [],int $status = null): JsonResponse
+    public static function error(string | null $message = null, array $errores = [], int $status = null): JsonResponse
     {
         return response()->json([
             'message' => $message,

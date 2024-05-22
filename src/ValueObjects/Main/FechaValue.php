@@ -13,8 +13,7 @@ class FechaValue extends CustomBaseValueObject implements Value
 
     public function __construct(
         private readonly string $fecha
-    )
-    {
+    ) {
         try {
             $this->carbon = new Carbon($fecha);
 
@@ -100,6 +99,11 @@ class FechaValue extends CustomBaseValueObject implements Value
         $carbon = new Carbon($this->fecha);
         $fecha  = $carbon->subSeconds($segundos)->format('Y-m-d H:i:s');
         return new self($fecha);
+    }
+
+    public function __toString(): string
+    {
+        return $this->carbon->toIso8601String();
     }
 
 }

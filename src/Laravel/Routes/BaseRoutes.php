@@ -2,11 +2,7 @@
 
 namespace Baezeta\Kernel\Laravel\Routes;
 
-abstract class BaseRoutes 
+abstract class BaseRoutes
 {
     public static string $prefix = 'admin';
 }
-
-
-
-

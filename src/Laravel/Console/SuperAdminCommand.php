@@ -34,7 +34,7 @@ class SuperAdminCommand extends Command
         $email = $this->components->ask('Introduce your email?', 'example@email.com');
         $password = $this->components->secret(' Introduce tu Password:');
 
-        if(!$this->verificarEmail($email)){
+        if(!$this->verificarEmail($email)) {
             $this->output->error('El email introducido no es valido');
             return Command::FAILURE;
         }
@@ -43,8 +43,8 @@ class SuperAdminCommand extends Command
             $this->output->error('El password introducido no es valido');
             return Command::FAILURE;
         }
-        
-        if(!$this->registrarUsuario($email, $password)){
+
+        if(!$this->registrarUsuario($email, $password)) {
             $this->output->error('El processo se ha interrumpido');
             return Command::FAILURE;
         }
@@ -71,7 +71,7 @@ class SuperAdminCommand extends Command
     {
         return isValidEmail($email);
     }
-    
+
     private function verificarPassword(string $password)
     {
         return isValidPassword($password);

@@ -2,7 +2,7 @@
 
 namespace Baezeta\Kernel\Collection;
 
-class BaseCollection extends CustomBaseCollection
+class CollectionBase extends CustomBaseCollection
 {
     public function __construct()
     {

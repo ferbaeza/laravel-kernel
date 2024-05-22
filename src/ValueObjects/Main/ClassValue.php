@@ -7,28 +7,28 @@ use Baezeta\Kernel\ValueObjects\Interfaces\Value;
 use Baezeta\Kernel\Exceptions\ValueObjects\UuidException;
 use Baezeta\Kernel\ValueObjects\Base\CustomBaseValueObject;
 
-class UuidValue extends CustomBaseValueObject implements Value
+class ClassValue extends CustomBaseValueObject implements Value
 {
     public function __construct(
-        public readonly string $uuid
+        public readonly string $uuid7
     ) {
-        if (!is_string($uuid)) {
-            throw UuidException::drop($uuid);
+        if (!is_string($uuid7)) {
+            throw UuidException::drop($uuid7);
         }
 
-        if (!isUuid($uuid)) {
-            throw UuidException::drop($uuid);
+        if (!isUuid($uuid7)) {
+            throw UuidException::drop($uuid7);
         }
     }
 
     public static function create(): self
     {
-        return new self(Uuid::uuid4()->toString());
+        return new self(Uuid::uuid7()->toString());
     }
 
     public function value(): mixed
     {
-        return $this->uuid;
+        return $this->uuid7;
     }
 
 }
