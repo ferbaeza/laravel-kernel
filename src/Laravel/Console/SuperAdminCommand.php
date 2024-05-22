@@ -7,7 +7,6 @@ use Symfony\Component\Console\Attribute\AsCommand;
 use Baezeta\Kernel\Bus\Infrastructure\CommandBusFacade;
 use Baezeta\Kernel\Laravel\Console\Example\ExampleCommand;
 
-#[AsCommand(name: 'admin:create-super-admin')]
 class SuperAdminCommand extends Command
 {
     /**
