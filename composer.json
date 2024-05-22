@@ -23,7 +23,8 @@
             ]
         }
     },
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
+    "prefer-stable": true,
     "authors": [
         {
             "name": "Fernando Baeza",
