@@ -19,7 +19,7 @@
     "extra": {
         "laravel":{
             "providers": [
-                "Baezeta\\App\\KernelServiceProvider"
+                "Baezeta\\Kernel\\KernelServiceProvider"
             ]
         }
     },
