@@ -1,0 +1,26 @@
+{
+    "name": "baezeta/kernel",
+    "description": "boilerplate para crear paquetes de laravel",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Baezeta\\Kernel\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel":{
+            "providers": [
+                "Baezeta\\App\\PackageServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "require": {},
+    "authors": [
+        {
+            "name": "Fernando Baeza",
+            "email": "fbaezahurato@gmail.com"
+        }
+    ]
+}
