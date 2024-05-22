@@ -29,21 +29,21 @@
             "email": "fbaezahurato@gmail.com"
         }
     ],
-    "require-dev": {
-        "phpunit/phpunit": "^11.2@dev",
-        "phpstan/phpstan": "2.0.x-dev",
-        "friendsofphp/php-cs-fixer": "dev-master",
-        "illuminate/support": "^12.0@dev",
-        "symfony/var-dumper": "7.2.x-dev"
-    },
-    "require": {
-        "ramsey/uuid": "5.x-dev"
-    },
     "scripts": {
         "auto": "composer dump-autoload -o",
         "tests": "phpunit --color=always --testdox tests/",
         "stan": "vendor/bin/phpstan analyse src --level 5",
         "fixer": "php ./vendor/bin/php-cs-fixer fix src/ --diff",
         "fixer-test": "php ./vendor/bin/php-cs-fixer fix tests/ --diff"
+    },
+    "require": {
+        "ramsey/uuid": "^4.7"
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^7.0",
+        "illuminate/support": "^11.8",
+        "friendsofphp/php-cs-fixer": "^3.57",
+        "phpstan/phpstan": "^1.11",
+        "phpunit/phpunit": "^11.1"
     }
 }
