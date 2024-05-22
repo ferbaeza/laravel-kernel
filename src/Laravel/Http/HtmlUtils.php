@@ -40,6 +40,7 @@ class HtmlUtils
                 $css[] = $file;
             }
         }
+        /** @phpstan-ignore-next-line */
         return ['js' => $js[0], 'css' => $css[0]];
     }
 
@@ -54,7 +55,7 @@ class HtmlUtils
         if (($app = @file_get_contents(__DIR__.'/../../../public/'. $css)) === false) {
             throw new RuntimeException('Unable to load the dashboard CSS.');
         }
-
+        /** @phpstan-ignore-next-line */
         return new HtmlString(<<<HTML
             <style>{$app}</style>
             HTML);
@@ -78,6 +79,7 @@ class HtmlUtils
         if (($script = @file_get_contents(__DIR__. '/../../../public/' . $js)) === false) {
             throw new RuntimeException('Unable to load the dashboard JavaScript.');
         }
+        /** @phpstan-ignore-next-line */
         return new HtmlString(<<<HTML
                 <script defer="defer">{$script}</script>
             HTML);

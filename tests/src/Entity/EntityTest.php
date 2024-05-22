@@ -23,8 +23,7 @@ class Persona extends EntityBase
     public function __construct(
         public readonly string $name,
         public readonly string $lastName,
-    )
-        {
+    ) {
     }
 
 }

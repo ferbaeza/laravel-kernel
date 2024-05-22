@@ -12,9 +12,8 @@ abstract class BaseKernelEntity
 
 
     public function __construct(
-        
-    )
-    {
+
+    ) {
         $this->idClass = ClassValue::create();
         $this->fechaStart = FechaValue::create();
     }

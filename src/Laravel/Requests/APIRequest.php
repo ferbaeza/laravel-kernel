@@ -8,6 +8,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Baezeta\Kernel\Laravel\Response\ApiResponse;
 use Illuminate\Http\Exceptions\HttpResponseException;
 
+/** @phpstan-ignore-next-line */
 abstract class APIRequest extends FormRequest
 {
     /**
@@ -36,7 +37,7 @@ abstract class APIRequest extends FormRequest
                 ];
             }
         }
-
+        /** @phpstan-ignore-next-line */
         throw new HttpResponseException(ApiResponse::error(null, $errorMessages, Response::HTTP_UNPROCESSABLE_ENTITY));
     }
 

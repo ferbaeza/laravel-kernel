@@ -23,8 +23,6 @@
             ]
         }
     },
-    "minimum-stability": "stable",
-    "prefer-stable": true,
     "authors": [
         {
             "name": "Fernando Baeza",
@@ -38,14 +36,14 @@
         "illuminate/support": "^12.0@dev",
         "symfony/var-dumper": "7.2.x-dev"
     },
+    "require": {
+        "ramsey/uuid": "5.x-dev"
+    },
     "scripts": {
         "auto": "composer dump-autoload -o",
         "tests": "phpunit --color=always --testdox tests/",
         "stan": "vendor/bin/phpstan analyse src --level 5",
         "fixer": "php ./vendor/bin/php-cs-fixer fix src/ --diff",
         "fixer-test": "php ./vendor/bin/php-cs-fixer fix tests/ --diff"
-    },
-    "require": {
-        "ramsey/uuid": "5.x-dev"
     }
 }

@@ -6,5 +6,4 @@ use Baezeta\Kernel\Base\BaseKernelEntity;
 
 class CustomBaseEntity extends BaseKernelEntity
 {
-
 }

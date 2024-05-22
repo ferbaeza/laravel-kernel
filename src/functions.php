@@ -4,7 +4,6 @@ use Ramsey\Uuid\Uuid;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Crypt;
 
-
 if (!function_exists('uuid4')) {
     function uuid4()
     {

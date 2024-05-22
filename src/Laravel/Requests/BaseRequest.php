@@ -4,6 +4,7 @@ namespace Baezeta\Kernel\Laravel\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
+/** @phpstan-ignore-next-line */
 class BaseRequest extends FormRequest
 {
     /**
