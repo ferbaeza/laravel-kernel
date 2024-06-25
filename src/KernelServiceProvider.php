@@ -2,37 +2,11 @@
 
 namespace Baezeta\Kernel;
 
-use Baezeta\Kernel\Traits\PackageTrait;
 use Illuminate\Support\ServiceProvider;
-use Baezeta\Kernel\Laravel\Console\SuperAdminCommand;
 use Baezeta\Kernel\Laravel\Middleware\TransaccionMiddleware;
 
 class KernelServiceProvider extends ServiceProvider
 {
-    use PackageTrait;
-
-    /**
-     * Registrar los bindings de la aplicación
-     */
-    protected function registerBindings()
-    {
-        foreach ($this->obtenerBindingsPackage() as $key => $value) {
-            is_numeric($key)
-                ? $this->app->singleton($value)
-                : $this->app->singleton($key, $value);
-        }
-    }
-    /**
-     * Registrar los comandos de la aplicación
-     */
-    protected function registerCommands()
-    {
-        if ($this->app->runningInConsole()) {
-            $this->commands([
-                SuperAdminCommand::class,
-            ]);
-        }
-    }
     /**
      * Registrar package middleware.
      *
@@ -49,10 +23,10 @@ class KernelServiceProvider extends ServiceProvider
     protected function registerConfig(): void
     {
         $this->publishes([
-            __DIR__ . '/../config/package.php' => $this->app->configPath('package.php'),
-        ], 'package-config');
+            __DIR__ . '/../config/kernel.php' => $this->app->configPath('kernel.php'),
+        ], 'kernel-laravel');
 
-        $this->mergeConfigFrom(__DIR__ . '/../config/package.php', 'package');
+        $this->mergeConfigFrom(__DIR__ . '/../config/kernel.php', 'kernel');
     }
 
     /**
@@ -62,9 +36,7 @@ class KernelServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->registerBindings();
-        $this->registerCommands();
         $this->registerMiddleware();
-        // $this->registerConfig();
+        $this->registerConfig();
     }
 }
