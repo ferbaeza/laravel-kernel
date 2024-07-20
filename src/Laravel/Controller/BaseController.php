@@ -42,7 +42,7 @@ class BaseController extends CustomBaseController
     }
 
     /** @phpstan-ignore-next-line */
-    public static function error(array $errores = [], int $status = null): JsonResponse
+    public static function sendErrorResponse(array $errores = [], int $status = null): JsonResponse
     {
         $statusCode = $status ?? self::INTERNAL_SERVER_ERROR;
         
